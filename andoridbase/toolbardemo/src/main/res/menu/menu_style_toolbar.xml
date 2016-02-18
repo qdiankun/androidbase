@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_down"
+        android:icon="@drawable/assignment_returned_white_48x48"
+        android:title="Assigment"
+        app:showAsAction="ifRoom"></item>
+
+
+    <item
+        android:id="@+id/action_prifile"
+        android:title="PROFILE"
+        app:showAsAction="always"></item>
+
+
+    <item
+        android:id="@+id/action_setting"
+        android:title="Setting"
+        app:showAsAction="never"></item>
+</menu>

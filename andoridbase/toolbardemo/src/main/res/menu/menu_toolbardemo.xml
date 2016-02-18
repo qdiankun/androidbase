@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_assigment"
+        android:icon="@drawable/assignment_ind_white_48x48"
+        android:title="Assigment"
+        app:showAsAction="ifRoom"></item>
+    <item
+        android:id="@+id/action_refresh"
+        android:icon="@drawable/autorenew_white_48x48"
+        android:title="Refresh"
+        app:showAsAction="ifRoom"></item>
+</menu>

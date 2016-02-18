@@ -10,9 +10,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/fragmentdemo" />
-            <option value="$PROJECT_DIR$/imagedemo" />
-            <option value="$PROJECT_DIR$/toolbardemo" />
+            <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
       </GradleProjectSettings>

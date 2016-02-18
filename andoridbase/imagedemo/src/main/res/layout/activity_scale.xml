@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="原图"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5px"
+            android:adjustViewBounds="true"
+            android:src="@drawable/jialin" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="指定宽高设置fitStart"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+
+        <ImageView
+            android:layout_width="300dip"
+            android:layout_height="300dip"
+            android:layout_margin="5px"
+            android:scaleType="fitStart"
+            android:background="#6699FF"
+            android:src="@drawable/jialin" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="指定宽高设置fitCenter"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="300dip"
+            android:layout_height="300dip"
+            android:layout_margin="5px"
+            android:scaleType="fitCenter"
+            android:background="#6699FF"
+            android:src="@drawable/jialin" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="指定宽高设置fitEnd"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+
+        <ImageView
+            android:layout_width="350dip"
+            android:layout_height="350dip"
+            android:layout_margin="5px"
+            android:scaleType="fitEnd"
+            android:src="@drawable/jialin"
+            android:background="#6699FF"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="centerInside:按横纵比缩放,使得ImageView能够完全显示这个图片"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+
+        <ImageView
+            android:layout_width="350dip"
+            android:layout_height="350dip"
+            android:layout_margin="5px"
+            android:scaleType="centerInside"
+            android:src="@drawable/jialin"
+            android:background="#6699FF"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="centerCrop:按横纵比缩放,直接完全覆盖整个ImageView"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+
+        <ImageView
+            android:layout_width="350dip"
+            android:layout_height="350dip"
+            android:layout_margin="5px"
+            android:scaleType="centerCrop"
+            android:src="@drawable/jialin"
+            android:background="#6699FF"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="fitXY不按比例缩放图片，目标是把图片塞满整个View"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="350dip"
+            android:layout_height="350dip"
+            android:layout_margin="5px"
+            android:scaleType="fitXY"
+            android:src="@drawable/jialin"
+            android:background="#6699FF"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="matrix 从ImageView的左上角开始绘制原图，原图超过ImageView的部分作裁剪处理"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+
+        <ImageView
+            android:layout_width="350dip"
+            android:layout_height="350dip"
+            android:layout_margin="5px"
+            android:scaleType="matrix"
+            android:src="@drawable/jialin"
+            android:background="#6699FF"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="center 保持原图的大小，显示在ImageView的中心。当原图的size大于ImageView的size，超过部分裁剪处理。"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="350dip"
+            android:layout_height="350dip"
+            android:layout_margin="5px"
+            android:scaleType="center"
+            android:src="@drawable/jialin"
+            android:background="#6699FF"/>
+
+
+    </LinearLayout>
+</ScrollView>

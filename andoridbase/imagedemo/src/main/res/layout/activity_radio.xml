@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--
+            正常的图片
+        -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5px"
+            android:adjustViewBounds="true"
+            android:src="@drawable/jialin" />
+
+        <!--
+            adjustViewBounds属性，用于设置缩放时是否保持原图长宽比
+        -->
+        <!-- 限制了最大宽度与高度,并且设置了调整边界来保持所显示图像的长宽比-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5px"
+            android:adjustViewBounds="true"
+            android:maxHeight="150dip"
+            android:maxWidth="300dip"
+            android:src="@drawable/jialin" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <com.me.diankun.imagedemo.weidget.RadioImageView
+                android:id="@+id/iv_radio"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/jialin"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

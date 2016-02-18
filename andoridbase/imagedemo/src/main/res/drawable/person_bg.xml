@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pen_bg"
+    android:gravity="top"
+    android:src="@drawable/person"
+    android:tileMode="disabled"></bitmap>
