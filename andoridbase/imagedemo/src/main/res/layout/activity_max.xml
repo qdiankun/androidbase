@@ -4,11 +4,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.me.diankun.imagedemo.weidget.ShowMaxImageView1
-        android:id="@+id/iv_max"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/meiz8"
-        android:scaleType="centerCrop"/>
+        android:layout_height="match_parent"
+        android:weightSum="2"
+        android:orientation="horizontal">
 
+        <com.me.diankun.imagedemo.weidget.ShowMaxImageView1
+            android:id="@+id/iv_max"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/meiz8"
+            android:scaleType="centerCrop" />
+
+    </LinearLayout>
 </LinearLayout>

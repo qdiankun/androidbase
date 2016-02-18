@@ -14,9 +14,9 @@ public class MainActivity extends AppCompatActivity {
 
     private Context context = this;
 
-    private final String[] items = {"使用静态Fragment","使用动态Fragment","通过接口交互"};
-    private final Class<?>[] classes = {StaticFragmentActivity.class,DynamicFragmentActivity.class,RssfeedActivity.class};
-    private ArrayAdapter<String> mAdapter ;
+    private final String[] items = {"Fragment的生命周期", "使用静态Fragment", "使用动态Fragment", "通过接口交互", "加入&弹出回退栈"};
+    private final Class<?>[] classes = {LifeActivity.class, StaticFragmentActivity.class, DynamicFragmentActivity.class, RssfeedActivity.class,BackstckActivity.class};
+    private ArrayAdapter<String> mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,7 +1,8 @@
 package com.me.diankun.imagedemo;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 
 import com.me.diankun.imagedemo.weidget.ShowMaxImageView1;
@@ -20,7 +21,15 @@ public class MaxActivity extends AppCompatActivity {
         setContentView(R.layout.activity_max);
         mMaxImg = (ShowMaxImageView1) findViewById(R.id.iv_max);
         //mMaxImg.setImageResource(R.drawable.meiz8);
-        mMaxImg.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.meiz8));
 
+
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean focus) {
+        super.onWindowFocusChanged(focus);
+        // get the imageviews width and height here
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.meizhi1);
+        mMaxImg.setImageBitmap(bitmap);
     }
 }

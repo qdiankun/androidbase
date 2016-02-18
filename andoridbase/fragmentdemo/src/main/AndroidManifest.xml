@@ -18,6 +18,8 @@
         <activity android:name=".StaticFragmentActivity" />
         <activity android:name=".DynamicFragmentActivity" />
         <activity android:name=".RssfeedActivity" />
+        <activity android:name=".LifeActivity" />
+        <activity android:name=".BackstckActivity" />
     </application>
 
 </manifest>
