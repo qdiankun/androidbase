@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请选择性别"
+        android:textSize="23dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/btnMan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="男" />
+
+        <RadioButton
+            android:id="@+id/btnWoman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="女" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnpost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提交" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:text="请选择喜欢吃的水果"
+        android:textSize="23dp" />
+
+
+    <CheckBox
+        android:id="@+id/checkbox_banana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="香蕉" />
+
+    <CheckBox
+        android:id="@+id/checkbox_orange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="橘子" />
+
+    <CheckBox
+        android:id="@+id/checkbox_apple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="苹果" />
+
+    <Button
+        android:id="@+id/btn_fruit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查看水果" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:text="自定义Checkbox样式"
+        android:textSize="23dp" />
+
+    <!--
+    修改样式两种设置方法:
+    方法一：android:button="@drawable/checkbox_selector"
+    方法二：style="@style/MyCheckBox"
+     -->
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/checkbox_selector"
+        android:text="香蕉" />
+
+    <CheckBox
+        style="@style/MyCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="橘子" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:text="橘子"
+        android:paddingLeft="10dip"
+        android:drawableRight="@mipmap/checkbox_white_circle_checked"/>
+
+    <CheckBox
+        style="@style/MyCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dip"
+        android:text="香蕉" />
+
+
+</LinearLayout>
