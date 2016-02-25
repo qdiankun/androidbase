@@ -1,1 +1,1 @@
-include ':fragmentdemo', ':toolbardemo', ':imagedemo', ':commonview', ':viewpager'
+include ':fragmentdemo', ':toolbardemo', ':imagedemo', ':commonview', ':viewpager', ':recyclerviewdemo'
