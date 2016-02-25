@@ -5,9 +5,10 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.Toast;
 
 import java.util.List;
@@ -18,7 +19,7 @@ import butterknife.OnClick;
 /**
  * Created by diankun on 2016/2/25.
  */
-public class ContactActivity  extends ToolbarActivity {
+public class ContactActivity extends ToolbarActivity {
 
     @Bind(R.id.rvContacts)
     RecyclerView mContacts;
@@ -28,6 +29,8 @@ public class ContactActivity  extends ToolbarActivity {
     private ContactAdapter mAdapter;
     private List<Contact> mDatas;
     private boolean mIsRequestDataRefresh = false;
+
+    private int mPage = -1;
 
     @Override
 
@@ -53,26 +56,50 @@ public class ContactActivity  extends ToolbarActivity {
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                requestDataRefresh();
+                loadFirst();
             }
         });
     }
 
-    private void requestDataRefresh() {
-        //mDatas.clear();
-        mDatas.addAll(Contact.createContactList(15));
-        mAdapter.notifyDataSetChanged();
-        mIsRequestDataRefresh = false;
+    /**
+     * 加载第一页数据
+     */
+    private void loadFirst() {
+        if (mPage = 1) {
+            mPage = 1;
+        }
 
-        //更新刷新状态
-        mSwipeRefreshLayout.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                mSwipeRefreshLayout.setRefreshing(false);
-            }
-        }, 3000);
+
+        loadData();
+    }
+
+    private void loadNextPage(int page) {
+
+        mPage = 1;
+
+        loadData();
 
     }
+
+    private void loadData() {
+        mPage++;
+        //mDatas.clear();
+        mDatas.addAll(Contact.createContactList(15, true));
+        mAdapter.notifyDataSetChanged();
+        mSwipeRefreshLayout.setRefreshing(false);
+        mIsRequestDataRefresh = false;
+
+        //模拟请求网络数据
+//        mSwipeRefreshLayout.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                //更新刷新状态
+//                mSwipeRefreshLayout.setRefreshing(false);
+//                mIsRequestDataRefresh = false;
+//            }
+//        }, 3000);
+    }
+
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
@@ -98,7 +125,7 @@ public class ContactActivity  extends ToolbarActivity {
 
     private void setupRecyclerView() {
         // Create adapter passing in the sample user data
-        mDatas = Contact.createContactList(20);
+        mDatas = Contact.createContactList(20, false);
         mAdapter = new ContactAdapter(mDatas);
         // Attach the adapter to the recyclerview to populate items
         mContacts.setAdapter(mAdapter);
@@ -122,7 +149,20 @@ public class ContactActivity  extends ToolbarActivity {
         //set animator
         mContacts.setItemAnimator(new DefaultItemAnimator());
 
+        mContacts.setOnTouchListener(
+                new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View v, MotionEvent event) {
+                        if (mIsRequestDataRefresh) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    }
+                }
+        );
         mContacts.addOnScrollListener(new AutoScrollListener());
+
     }
 
     @OnClick(R.id.btn_add_bottom_item)
@@ -168,14 +208,12 @@ public class ContactActivity  extends ToolbarActivity {
             super.onScrolled(recyclerView, dx, dy);
             // 最新可见元素的位置
             lastPosition = ((LinearLayoutManager) recyclerView.getLayoutManager()).findLastCompletelyVisibleItemPosition();
-            Log.i("TAG", "lastPosition = " + lastPosition);
         }
 
         @Override
         public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
             super.onScrollStateChanged(recyclerView, newState);
             int totalItemIndex = recyclerView.getAdapter().getItemCount();
-            Log.i("TAG", "totalItemIndex = " + totalItemIndex);
             if (!mIsRequestDataRefresh && newState == RecyclerView.SCROLL_STATE_IDLE
                     && (lastPosition + 1) >= (totalItemIndex - 1)) {
 //                mSwipeRefreshLayout.setRefreshing(true);
@@ -184,7 +222,7 @@ public class ContactActivity  extends ToolbarActivity {
 //                setRequestDataRefresh(true);
                 mIsRequestDataRefresh = true;
                 mSwipeRefreshLayout.setRefreshing(true);
-                requestDataRefresh();
+                loadNextPage(1);
             }
         }
     }

@@ -31,12 +31,16 @@ public class Contact {
         return mOnline;
     }
 
-    public static List<Contact> createContactList(int numberContact) {
+    public static List<Contact> createContactList(int numberContact, boolean flag) {
         List<Contact> contactsList = new ArrayList<Contact>();
 
         Contact contact = null;
         for (int i = 0; i < numberContact; i++) {
-            contact = new Contact("Person" + (i + 1), i <= numberContact / 2);
+            if (flag) {
+                contact = new Contact("Person" + (i + 1) + " next page", i <= numberContact / 2);
+            } else {
+                contact = new Contact("Person" + (i + 1) + " refresh ", i <= numberContact / 2);
+            }
             contactsList.add(contact);
         }
         return contactsList;
