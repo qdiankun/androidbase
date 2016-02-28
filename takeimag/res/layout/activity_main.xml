@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btn_take_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Take Photo" >
+    </Button>
+
+    <Button
+        android:id="@+id/btn_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test File" >
+    </Button>
+
+    <Button
+        android:id="@+id/btn_volley"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test File" >
+    </Button>
+
+    <Button
+        android:id="@+id/btn_imageloader_volley"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test File" >
+    </Button>
+
+    <Button
+        android:id="@+id/btn_gson_volley"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test File" >
+    </Button>
+
+    <Button
+        android:id="@+id/btn_open_diskcache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="使用DiskCache" >
+    </Button>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY" />
+
+    <uk.co.senab.photoview.PhotoView
+        android:id="@+id/photoview"
+        android:layout_width="200dip"
+        android:layout_height="200dip" >
+    </uk.co.senab.photoview.PhotoView>
+
+</LinearLayout>
