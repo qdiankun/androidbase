@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/toolbardemo/toolbardemo.iml" filepath="$PROJECT_DIR$/toolbardemo/toolbardemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/viewpager/viewpager.iml" filepath="$PROJECT_DIR$/viewpager/viewpager.iml" />
       <module fileurl="file://$PROJECT_DIR$/viewpager/viewpager.iml" filepath="$PROJECT_DIR$/viewpager/viewpager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/volleydemo/volleydemo.iml" filepath="$PROJECT_DIR$/volleydemo/volleydemo.iml" />
     </modules>
   </component>
 </project>

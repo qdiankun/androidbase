@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/recyclerviewdemo" />
             <option value="$PROJECT_DIR$/toolbardemo" />
             <option value="$PROJECT_DIR$/viewpager" />
+            <option value="$PROJECT_DIR$/volleydemo" />
           </set>
         </option>
       </GradleProjectSettings>

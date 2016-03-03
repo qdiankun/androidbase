@@ -14,8 +14,14 @@ public class MainActivity extends AppCompatActivity {
 
     private Context context = this;
 
-    private final String[] items = {"图片显示指定大小", "src与background区别", "缩放Activity", "宽度填充高度自适应"};
-    private final Class<?>[] classes = {RadioActivity.class, CheckActivity.class, ScaleActivity.class,MaxActivity.class};
+    private final String[] items = {
+            "图片显示指定大小", "src与background区别", "缩放Activity", "宽度填充高度自适应",
+            "通过HttpURLConnection获取图片", "使用DiskCache缓存图片", "照片墙的实现",
+            "手机拍照"};
+    private final Class<?>[] classes = {
+            RadioActivity.class, CheckActivity.class, ScaleActivity.class, MaxActivity.class,
+            GetImageActivity.class, DiskCacheActivity.class, PhotoWallActivity.class,
+            TakePhotoActivity.class};
     private ArrayAdapter<String> mAdapter;
 
     @Override

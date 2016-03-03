@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_volley_string"
+            style="@style/button_style"
+            android:text="使用Volley的volleyStringRequest获取String"></Button>
+
+        <Button
+            android:id="@+id/btn_volley"
+            style="@style/button_style"
+            android:text="使用Volley的ImageRequest获取图片"></Button>
+
+        <Button
+            android:id="@+id/btn_imageloader_volley"
+            style="@style/button_style"
+            android:text="使用Volley的ImagLoader获取图片"></Button>
+
+        <Button
+            android:id="@+id/btn_gson_volley"
+            style="@style/button_style"
+            android:text="使用Volley+GSON解析JSON"></Button>
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY" />
+
+
+    </LinearLayout>
+
+</ScrollView>
