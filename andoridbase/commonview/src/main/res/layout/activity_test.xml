@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/btn_scroll"
+        style="@style/button_style"
+        android:text="Scroll" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dip"
+        android:text="滑动view——使用Layout(相对坐标)"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <com.me.diankun.commonview.dragview.DragViewOne
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:background="#f36c60"
+        android:gravity="center"
+        android:text="welcome" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dip"
+        android:text="滑动view——使用Layout(绝对坐标)"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <com.me.diankun.commonview.dragview.DragViewTwo
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:background="#f36c60"
+        android:gravity="center"
+        android:text="welcome" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dip"
+        android:text="滑动view——使用offsetLeftAndRight()和offsetTopAndBottom()"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <com.me.diankun.commonview.dragview.DragViewThree
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:background="#f36c60"
+        android:gravity="center"
+        android:text="welcome" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dip"
+        android:text="滑动view——使用LayoutParams来实现"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <com.me.diankun.commonview.dragview.DragViewFour
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:background="#f36c60"
+        android:gravity="center"
+        android:text="welcome" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dip"
+        android:text="滑动view——使用通过scrollTo和scrollBy来实现"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.me.diankun.commonview.dragview.DragViewFive
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:background="#f36c60"
+            android:gravity="center"
+            android:text="welcome" />
+
+    </LinearLayout>
+
+
+    <com.me.diankun.commonview.CustomTextView
+        android:id="@+id/customtxtview"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:background="#f36c60"
+        android:gravity="center"
+        android:text="welcome"
+        android:visibility="gone" />
+
+</LinearLayout>
