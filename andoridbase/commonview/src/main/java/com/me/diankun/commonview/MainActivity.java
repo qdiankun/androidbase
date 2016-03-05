@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Context context = this;
 
-    private final String[] items = {"RadioButton&Checkbox使用"};
-    private final Class<?>[] classes = {RadioCheckActivity.class};
+    private final String[] items = {"RadioButton&Checkbox使用","滑动View的几种方法"};
+    private final Class<?>[] classes = {RadioCheckActivity.class,DragViewActivity.class};
     private ArrayAdapter<String> mAdapter;
 
     @Override

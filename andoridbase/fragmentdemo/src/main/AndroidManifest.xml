@@ -20,6 +20,8 @@
         <activity android:name=".RssfeedActivity" />
         <activity android:name=".LifeActivity" />
         <activity android:name=".BackstckActivity" />
+        <activity android:name=".news.NewsDemoActivity" />
+        <activity android:name=".news.NewsContentActivity" />
     </application>
 
 </manifest>

@@ -16,6 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".RadioCheckActivity" />
+        <activity android:name=".DragViewActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
     </application>
 
 </manifest>
