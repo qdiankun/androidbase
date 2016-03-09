@@ -48,8 +48,7 @@ public class DragViewFive extends TextView {
         int y = (int) event.getY();
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                //记录起始位置
-                mLastX = x;
+                //记录起始位置                 mLastX = x;
                 mLastY = y;
                 break;
             case MotionEvent.ACTION_MOVE:
