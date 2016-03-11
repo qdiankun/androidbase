@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Context context = this;
 
-    private final String[] items = {"使用ReyclerView"};
-    private final Class<?>[] classes = {ContactActivity.class};
+    private final String[] items = {"使用ReyclerView","选择列表"};
+    private final Class<?>[] classes = {ContactActivity.class,ChooseListActivity.class};
     private ArrayAdapter<String> mAdapter;
 
     @Override

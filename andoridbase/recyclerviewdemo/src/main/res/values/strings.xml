@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">recyclerviewdemo</string>
+
+    <string-array name="main_items">
+        <item>Item - 1</item>
+        <item>Item - 2</item>
+        <item>Item - 3</item>
+        <item>Item - 4</item>
+        <item>Item - 5</item>
+    </string-array>
 </resources>

@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.animatedemo.view.CustomTextView;
+
 /**
  * Created by diankun on 2016/3/4.
  *

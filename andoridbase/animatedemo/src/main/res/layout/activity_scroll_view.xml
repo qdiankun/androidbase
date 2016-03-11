@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="195dip"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View跟随手指移动而移动的几种实现方式\n其中计算偏移量可以通过getX()或是getRaw()得到，其中getX()无需记录上次的位置，而getRawX()要记录上次的位置\n移动偏移量可以通过layout(l,t,r,b)或者offsetTopAndBottom(offsetY),offsetLeftAndRight(offsetY)或者scrollBy(offsetX,offsetY)"
+                android:textColor="@color/sky_blue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dip"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用getX(),getY()计算移动的偏移量，无需每次都记录上次的位置"
+                android:textColor="@color/transparent_red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_move_getx"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/button_selector"
+            android:text="使用getX()计算偏移"
+            android:textSize="18sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dip"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用getRawX(),getRawY()计算移动的偏移量，需要每次都记录上次的位置"
+                android:textColor="@color/transparent_red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_move_getrawx"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/button_selector"
+            android:text="使用getRawX()计算偏移"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dip"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="计算出偏移量，使用layoutparams移动指定的偏移量"
+                android:textColor="@color/transparent_red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_move_layoutparams"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/button_selector"
+            android:text="计算偏移量后使用layoutparams移动"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dip"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="计算出偏移量，使用ScrollBy(offsetX,offsetY)移动指定的偏移量"
+                android:textColor="@color/transparent_red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_move_scrollby"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/button_selector"
+            android:text="计算偏移量后使用scrollBy移动"
+            android:textSize="18sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dip"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="计算出偏移量，使用ScrollBy(offsetX,offsetY)移动,手指松开后滑动回来"
+                android:textColor="@color/transparent_red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_move_scrollback"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/button_selector"
+            android:text="计算偏移量后使用scrollBy移动,松开返回"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="265dip"
+        android:gravity="center|left"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用ScrollTo()注意两点：\n1 使用scrollBy,scrollTo方法，如果在ViewGroup中使用移动的就是所有的子View；如果在子View中移动那移动的就是View中的内容\n2 scrllTo(offsetX,offsetY),如果offsetX为正数，View朝左移动，如果为负数，View朝右移动；同理，offsetY正数朝上移动，offsetY负数，朝下移动，所以当我们朝x,y轴正方向移动的时候，offsetX,offsetY必须是负数"
+            android:textColor="@color/transparent_red"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.animatedemo.scrollview.ScrollViewFour
+            android:layout_width="100dip"
+            android:layout_height="100dip" />
+    </LinearLayout>
+</LinearLayout>

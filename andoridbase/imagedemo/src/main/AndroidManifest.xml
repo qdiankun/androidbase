@@ -31,6 +31,7 @@
         <activity android:name=".DiskCacheActivity" />
         <activity android:name=".PhotoWallActivity" />
         <activity android:name=".TakePhotoActivity" />
+        <activity android:name=".ImageClickActivity" />
     </application>
 
 </manifest>

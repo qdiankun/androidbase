@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 /**
  * 方式二：使用Layout来实现滑动---使用绝对坐标实现
+ * 参考如下的图解:http://www.processon.com/apps/56d94c86e4b097bfa11f84b3
  * <p/>
  * Created by diankun on 2016/3/4.
  */

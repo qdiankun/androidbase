@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用到Paint的属性:\nsetAntiAlias() 画笔锯齿效果\nsetColor() 画笔的颜色\nsetARGB() 画笔的A、R、G、B值\nsetAlpha() 画笔的Alpha值\nsetTextSiz() 画笔的字体尺寸\nsetStyle() 设置画笔的风格(实心或空心)\n实心Paint.Style.FILL\n空心Paint.Style.STROKE\nsetStrokeWidth() 空心边框的宽度\n\n注意事项：\n1.canvas.save(),canvas.restore()这中间发生移动对下面绘制不起作用，下面参考的坐标任然以save()方法之前的为准\n2.绘制圆弧Arc,中的参数，第一个是矩形，第二个是起始位置，第三个是要覆盖的角度，第四个参数true表示两个连接中心的覆盖，false表示两个边连接起来"
+                android:textColor="@color/transparent_red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_draw_axis"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/button_selector"
+            android:text="使用Draw绘制坐标系AXIS"
+            android:onClick="onClick"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/btn_draw_argb"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/button_selector"
+            android:text="使用Draw绘制ARGB"
+            android:onClick="onClick"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/btn_draw_text"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/button_selector"
+            android:text="使用Draw绘制Text"
+            android:onClick="onClick"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/btn_draw_point"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/button_selector"
+            android:text="使用Draw绘制点Point"
+            android:onClick="onClick"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/btn_draw_line"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/button_selector"
+            android:text="使用Draw绘制点Line"
+            android:onClick="onClick"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/btn_draw_rect"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/button_selector"
+            android:text="使用Draw绘制点Rect"
+            android:onClick="onClick"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/btn_draw_circle"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/button_selector"
+            android:text="使用Draw绘制点Circle"
+            android:onClick="onClick"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/btn_draw_oval"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/button_selector"
+            android:text="使用Draw绘制点Oval"
+            android:onClick="onClick"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/btn_draw_arc"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/button_selector"
+            android:text="使用Draw绘制点Arc"
+            android:onClick="onClick"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/btn_draw_path"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/button_selector"
+            android:text="使用Draw绘制点Path"
+            android:onClick="onClick"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/btn_draw_bitmap"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/button_selector"
+            android:text="使用Draw绘制点Bitmap"
+            android:onClick="onClick"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/btn_draw_pathto"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/button_selector"
+            android:text="使用Draw绘制Path中To方法使用"
+            android:onClick="onClick"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_draw_arc_demo"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/button_selector"
+            android:text="使用Draw绘制Arc的Demo"
+            android:onClick="onClick"
+            android:textSize="18sp" />
+    </LinearLayout>
+</ScrollView>

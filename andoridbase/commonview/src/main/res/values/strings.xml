@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">commonview</string>
+
+
+    <string-array name="material_design_dialog">
+        <item>library aletdialog1(正常)</item>
+        <item>library aletdialog2(兼容旧的 AlertDialogWrapper)</item>
+        <item>library aletdialog3(call back)</item>
+        <item>library aletdialog4(List Dialogs)</item>
+        <item>library aletdialog5(Single Choice List Dialogs)</item>
+        <item>library aletdialog6(Multi Choice List Dialogs)</item>
+        <item>library aletdialog7(Custom List Dialogs)</item>
+        <item>library aletdialog8(Custom Views)</item>
+    </string-array>
 </resources>

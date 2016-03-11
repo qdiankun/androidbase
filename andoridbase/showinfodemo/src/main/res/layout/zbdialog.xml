@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 子表弹出窗口 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dip"
+    android:layout_height="wrap_content"
+    android:background="@drawable/zb_bg_n"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dip" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="12dip"
+            android:src="@drawable/inc" />
+
+        <TextView
+            android:id="@+id/dialog_title"
+            style="@style/add_titleStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:layout_marginTop="10dip"
+            android:gravity="center_vertical"
+            android:text="其它信息"
+            android:textColor="#6EBAF5" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ListView
+            android:id="@+id/zb_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#F7F7F7"
+            android:divider="#CCCCCC"
+            android:dividerHeight="0.1dip" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

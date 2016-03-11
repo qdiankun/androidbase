@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_send_broadcast"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/button_selector"
+        android:text="停止后台的更新"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="70dip"
+        android:text="Actiivty的OnCreate动态注册广播接收Service发送的广播，在OnReceiver()方法中更新数字，然后启动服务\n服务每隔两秒给Activity发送广播，并且在服务中注册停止的广播\nActivity中点击Button发送停止广播"
+        android:textColor="@color/sky_blue"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="要改变的数字"
+        android:textColor="@color/transparent_red"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

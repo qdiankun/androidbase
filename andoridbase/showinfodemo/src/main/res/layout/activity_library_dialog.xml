@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<include layout="@layout/view_toolbar" />-->
+
+    <!--
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:text="使用 com.afollestad:material-dialogs 的dialog"/>
+
+    <com.gc.materialdesign.views.ButtonRectangle
+        android:id="@+id/btn_library_aletdialog1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:text="showDialog"
+        android:textSize="8sp"
+        android:visibility="gone"/>
+
+    <com.gc.materialdesign.views.ButtonRectangle
+        android:id="@+id/btn_library_aletdialog2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:text="showDialog2"
+        android:textSize="8sp"
+        android:visibility="gone"/>
+    -->
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"></ListView>
+
+
+
+</LinearLayout>

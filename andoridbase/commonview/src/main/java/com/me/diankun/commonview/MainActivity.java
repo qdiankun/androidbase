@@ -14,8 +14,14 @@ public class MainActivity extends AppCompatActivity {
 
     private Context context = this;
 
-    private final String[] items = {"RadioButton&Checkbox使用"};
-    private final Class<?>[] classes = {RadioCheckActivity.class};
+    private final String[] items = {
+            "RadioButton&Checkbox使用", "TexView的使用", "EditText使用",
+            "LinearLayout的点击效果", "ListView使用注意"};
+
+    private final Class<?>[] classes = {
+            RadioCheckActivity.class, TextViewActivity.class, EditActivity.class,
+            LayoutActivity.class};
+
     private ArrayAdapter<String> mAdapter;
 
     @Override

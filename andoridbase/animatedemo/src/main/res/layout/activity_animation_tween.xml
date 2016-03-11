@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dip"
+        android:gravity="center|left"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="动画分为3类：Frame(帧动画)、Tweenen(补间动画)、Property(属性动画)"
+            android:textColor="@color/sky_blue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ff495a" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/item_popupwindows_camera"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/item_photo_choose_bg"
+                android:text="拍照"
+                android:textColor="#585858"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f2f2f2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/item_popupwindows_Photo"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/item_photo_choose_bg"
+                android:text="从相册中选取"
+                android:textColor="#585858"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f2f2f2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/item_popupwindows_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/item_photo_choose_bg"
+                android:text="取消"
+                android:textColor="#585858"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:gravity="center|left"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="对上面的布局进行动画操作"
+            android:textColor="@color/sky_blue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dip"
+        android:gravity="center|left"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tween类型的动画,通过对场景里的对象不断做图像变换(平移、缩放、旋转)产生动画效果"
+            android:textColor="@color/transparent_red"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_tween_alpha_hide"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/button_selector"
+                android:text="Tween_Alpha_Hide" />
+
+            <Button
+                android:id="@+id/btn_tween_alpha_show"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/button_selector"
+                android:text="Tween_Alpha_Show" />
+
+            <Button
+                android:id="@+id/btn_tween_scale"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/button_selector"
+                android:text="Tween_Scale" />
+
+            <Button
+                android:id="@+id/btn_tween_translate_to_right"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/button_selector"
+                android:text="Tween_Translate_To_Right" />
+
+            <Button
+                android:id="@+id/btn_tween_translate_to_left"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/button_selector"
+                android:text="Teween_Translate_To_Left" />
+
+            <Button
+                android:id="@+id/btn_tween_translate_to_top"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/button_selector"
+                android:text="Tween_Translate_To_Top" />
+
+            <Button
+                android:id="@+id/btn_tween_translate_to_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/button_selector"
+                android:text="Tween_Translate_To_Bottom" />
+
+            <Button
+                android:id="@+id/btn_tween_rotate"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/button_selector"
+                android:text="Tween_Rotate" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,1 +1,4 @@
-include ':animatedemo'
+include ':animatedemo', ':showinfodemo', ':drawdemo', ':broadcastdemo'
+include ':commonview'
+include ':imagedemo'
+include ':recyclerviewdemo'

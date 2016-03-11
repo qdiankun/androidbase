@@ -11,6 +11,9 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
+import com.me.diankun.recyclerviewdemo.adapter.ContactAdapter;
+import com.me.diankun.recyclerviewdemo.bean.Contact;
+
 import java.util.List;
 
 import butterknife.Bind;
@@ -65,7 +68,7 @@ public class ContactActivity extends ToolbarActivity {
      * 加载第一页数据
      */
     private void loadFirst() {
-        if (mPage = 1) {
+        if (mPage != 1) {
             mPage = 1;
         }
 

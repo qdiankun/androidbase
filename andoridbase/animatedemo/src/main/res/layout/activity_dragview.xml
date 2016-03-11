@@ -97,7 +97,7 @@
     </LinearLayout>
 
 
-    <com.example.animatedemo.CustomTextView
+    <com.example.animatedemo.view.CustomTextView
         android:id="@+id/customtxtview"
         android:layout_width="40dip"
         android:layout_height="40dip"
