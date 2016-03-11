@@ -30,3 +30,9 @@ proguard/
 
 # Android Studio captures folder
 captures/
+
+
+##
+andoridbase/.idea/gradle.xml
+andoridbase/.idea/misc.xml
+andoridbase/.idea/modules.xml
