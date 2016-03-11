@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/andoridbase.iml" filepath="$PROJECT_DIR$/andoridbase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/animatedemo/animatedemo.iml" filepath="$PROJECT_DIR$/animatedemo/animatedemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/commonview/commonview.iml" filepath="$PROJECT_DIR$/commonview/commonview.iml" />
       <module fileurl="file://$PROJECT_DIR$/commonview/commonview.iml" filepath="$PROJECT_DIR$/commonview/commonview.iml" />
       <module fileurl="file://$PROJECT_DIR$/fragmentdemo/fragmentdemo.iml" filepath="$PROJECT_DIR$/fragmentdemo/fragmentdemo.iml" />

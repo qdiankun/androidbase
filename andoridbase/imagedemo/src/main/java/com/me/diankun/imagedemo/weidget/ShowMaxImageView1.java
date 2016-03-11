@@ -8,7 +8,7 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import com.me.diankun.imagedemo.ScreenSizeUtil;
+import com.me.diankun.imagedemo.utils.ScreenSizeUtil;
 
 /**
  * Created by diankun on 2016/2/18.

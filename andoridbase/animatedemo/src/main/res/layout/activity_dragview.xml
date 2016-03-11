@@ -19,9 +19,9 @@
         android:textStyle="bold" />
 
 
-    <com.me.diankun.commonview.dragview.DragViewOne
-        android:layout_width="30dip"
-        android:layout_height="30dip"
+    <com.example.animatedemo.dragview.DragViewOne
+        android:layout_width="40dip"
+        android:layout_height="40dip"
         android:background="#f36c60"
         android:gravity="center"
         android:text="welcome" />
@@ -36,9 +36,9 @@
         android:textStyle="bold" />
 
 
-    <com.me.diankun.commonview.dragview.DragViewTwo
-        android:layout_width="30dip"
-        android:layout_height="30dip"
+    <com.example.animatedemo.dragview.DragViewTwo
+        android:layout_width="40dip"
+        android:layout_height="40dip"
         android:background="#f36c60"
         android:gravity="center"
         android:text="welcome" />
@@ -52,9 +52,9 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <com.me.diankun.commonview.dragview.DragViewThree
-        android:layout_width="30dip"
-        android:layout_height="30dip"
+    <com.example.animatedemo.dragview.DragViewThree
+        android:layout_width="40dip"
+        android:layout_height="40dip"
         android:background="#f36c60"
         android:gravity="center"
         android:text="welcome" />
@@ -67,9 +67,9 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <com.me.diankun.commonview.dragview.DragViewFour
-        android:layout_width="30dip"
-        android:layout_height="30dip"
+    <com.example.animatedemo.dragview.DragViewFour
+        android:layout_width="40dip"
+        android:layout_height="40dip"
         android:background="#f36c60"
         android:gravity="center"
         android:text="welcome" />
@@ -87,9 +87,9 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.me.diankun.commonview.dragview.DragViewFive
-            android:layout_width="30dip"
-            android:layout_height="30dip"
+        <com.example.animatedemo.dragview.DragViewFive
+            android:layout_width="40dip"
+            android:layout_height="40dip"
             android:background="#f36c60"
             android:gravity="center"
             android:text="welcome" />
@@ -97,10 +97,10 @@
     </LinearLayout>
 
 
-    <com.me.diankun.commonview.CustomTextView
+    <com.example.animatedemo.CustomTextView
         android:id="@+id/customtxtview"
-        android:layout_width="30dip"
-        android:layout_height="30dip"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
         android:background="#f36c60"
         android:gravity="center"
         android:text="welcome"

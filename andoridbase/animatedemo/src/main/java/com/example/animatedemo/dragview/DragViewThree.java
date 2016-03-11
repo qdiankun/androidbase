@@ -1,4 +1,4 @@
-package com.me.diankun.commonview.dragview;
+package com.example.animatedemo.dragview;
 
 import android.content.Context;
 import android.util.AttributeSet;

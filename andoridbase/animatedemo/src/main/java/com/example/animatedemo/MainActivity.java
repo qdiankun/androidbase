@@ -1,4 +1,4 @@
-package com.me.diankun.commonview;
+package com.example.animatedemo;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Context context = this;
 
-    private final String[] items = {"RadioButton&Checkbox使用"};
-    private final Class<?>[] classes = {RadioCheckActivity.class};
+    private final String[] items = {"滑动View的几种方法","mScrollX与mScrollY理解"};
+    private final Class<?>[] classes = {DragViewActivity.class,ScrollXActivity.class};
     private ArrayAdapter<String> mAdapter;
 
     @Override

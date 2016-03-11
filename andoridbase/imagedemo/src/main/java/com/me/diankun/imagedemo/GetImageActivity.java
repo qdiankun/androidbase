@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.me.diankun.imagedemo.utils.BitmapUtils;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;

@@ -10,7 +10,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.ImageView;
 
-import com.me.diankun.imagedemo.ScreenSizeUtil;
+import com.me.diankun.imagedemo.utils.ScreenSizeUtil;
 
 /**
  * 自定义控件，用于显示宽度和ImageView相同，高度自适应的图片显示模式.

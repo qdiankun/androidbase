@@ -1,4 +1,4 @@
-package com.me.diankun.imagedemo;
+package com.me.diankun.imagedemo.utils;
 
 import android.app.Activity;
 

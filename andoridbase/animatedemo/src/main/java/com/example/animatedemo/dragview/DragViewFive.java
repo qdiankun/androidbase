@@ -1,19 +1,19 @@
-package com.me.diankun.commonview.dragview;
+package com.example.animatedemo.dragview;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
+import android.view.View;
 import android.view.ViewConfiguration;
-import android.view.ViewGroup;
 import android.widget.TextView;
 
 /**
- * 方式三：使用LayoutParams来实现来实现方法来实现
+ * 方式三：使用scrollTo和scrollBy方法
  * <p/>
  * Created by diankun on 2016/3/4.
  */
-public class DragViewFour extends TextView {
+public class DragViewFive extends TextView {
 
     // 记录上次按下的位置
     private int mLastX = 0;
@@ -22,15 +22,15 @@ public class DragViewFour extends TextView {
     private int mScaledTouchSlop;
 
 
-    public DragViewFour(Context context) {
+    public DragViewFive(Context context) {
         super(context, null);
     }
 
-    public DragViewFour(Context context, AttributeSet attrs) {
+    public DragViewFive(Context context, AttributeSet attrs) {
         super(context, attrs, 0);
     }
 
-    public DragViewFour(Context context, AttributeSet attrs, int defStyleAttr) {
+    public DragViewFive(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
         initView();
@@ -48,8 +48,7 @@ public class DragViewFour extends TextView {
         int y = (int) event.getY();
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                //记录起始位置
-                mLastX = x;
+                //记录起始位置                 mLastX = x;
                 mLastY = y;
                 break;
             case MotionEvent.ACTION_MOVE:
@@ -57,10 +56,7 @@ public class DragViewFour extends TextView {
                 int deltaX = x - mLastX;
                 int deltaY = y - mLastY;
 
-                ViewGroup.MarginLayoutParams lps = (ViewGroup.MarginLayoutParams) getLayoutParams();
-                lps.leftMargin = getLeft() + deltaX;
-                lps.rightMargin = getRight() + deltaY;
-                setLayoutParams(lps);
+                ((View) getParent()).scrollBy(-deltaX, -deltaY);
                 break;
             case MotionEvent.ACTION_UP:
 
