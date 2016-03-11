@@ -1,4 +1,4 @@
-package com.me.diankun.commonview;
+package com.example.animatedemo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -18,7 +18,7 @@ public class DragViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test);
+        setContentView(R.layout.activity_dragview);
 
         btn_scroll = (Button) findViewById(R.id.btn_scroll);
         customTextView = (CustomTextView) findViewById(R.id.customtxtview);

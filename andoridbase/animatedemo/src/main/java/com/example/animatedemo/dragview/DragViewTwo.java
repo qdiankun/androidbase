@@ -1,19 +1,18 @@
-package com.me.diankun.commonview.dragview;
+package com.example.animatedemo.dragview;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
-import android.view.View;
 import android.view.ViewConfiguration;
 import android.widget.TextView;
 
 /**
- * 方式三：使用scrollTo和scrollBy方法
+ * 方式二：使用Layout来实现滑动---使用绝对坐标实现
  * <p/>
  * Created by diankun on 2016/3/4.
  */
-public class DragViewFive extends TextView {
+public class DragViewTwo extends TextView {
 
     // 记录上次按下的位置
     private int mLastX = 0;
@@ -22,15 +21,15 @@ public class DragViewFive extends TextView {
     private int mScaledTouchSlop;
 
 
-    public DragViewFive(Context context) {
+    public DragViewTwo(Context context) {
         super(context, null);
     }
 
-    public DragViewFive(Context context, AttributeSet attrs) {
+    public DragViewTwo(Context context, AttributeSet attrs) {
         super(context, attrs, 0);
     }
 
-    public DragViewFive(Context context, AttributeSet attrs, int defStyleAttr) {
+    public DragViewTwo(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
         initView();
@@ -48,15 +47,16 @@ public class DragViewFive extends TextView {
         int y = (int) event.getY();
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                //记录起始位置                 mLastX = x;
+                //记录起始位置
+                mLastX = x;
                 mLastY = y;
                 break;
             case MotionEvent.ACTION_MOVE:
 
                 int deltaX = x - mLastX;
                 int deltaY = y - mLastY;
-
-                ((View) getParent()).scrollBy(-deltaX, -deltaY);
+                //使用layout来实现滑动
+                layout(getLeft() + deltaX, getTop() + deltaY, getRight() + deltaX, getBottom() + deltaY);
                 break;
             case MotionEvent.ACTION_UP:
 

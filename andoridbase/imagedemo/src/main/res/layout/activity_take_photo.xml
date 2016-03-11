@@ -10,6 +10,11 @@
         android:text="拍照返回图片" />
 
     <Button
+        android:id="@+id/btn_choose_photo"
+        style="@style/button_style"
+        android:text="从相册中选取图片" />
+
+    <Button
         android:id="@+id/btn_create_file"
         style="@style/button_style"
         android:text="创建文件" />

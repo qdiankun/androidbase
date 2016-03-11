@@ -10,6 +10,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/animatedemo" />
             <option value="$PROJECT_DIR$/commonview" />
             <option value="$PROJECT_DIR$/fragmentdemo" />
             <option value="$PROJECT_DIR$/imagedemo" />

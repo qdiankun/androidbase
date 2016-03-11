@@ -1,4 +1,4 @@
-package com.me.diankun.commonview.dragview;
+package com.example.animatedemo;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -8,65 +8,60 @@ import android.view.ViewConfiguration;
 import android.widget.TextView;
 
 /**
- * 方式二：使用Layout来实现滑动---使用绝对坐标实现
- * <p/>
  * Created by diankun on 2016/3/4.
  */
-public class DragViewTwo extends TextView {
+public class CustomTextView extends TextView {
 
-    // 记录上次按下的位置
+
+    // 分别记录上次滑动的坐标
     private int mLastX = 0;
     private int mLastY = 0;
     //滑动的最小距离
     private int mScaledTouchSlop;
 
+    private static final String TAG = CustomTextView.class.getSimpleName();
 
-    public DragViewTwo(Context context) {
-        super(context, null);
+
+    public CustomTextView(Context context) {
+        this(context, null);
     }
 
-    public DragViewTwo(Context context, AttributeSet attrs) {
-        super(context, attrs, 0);
+    public CustomTextView(Context context, AttributeSet attrs) {
+        this(context, attrs, 0);
     }
 
-    public DragViewTwo(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CustomTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-
-        initView();
+        init();
     }
 
-    private void initView() {
+    private void init() {
         mScaledTouchSlop = ViewConfiguration.get(getContext()).getScaledTouchSlop();
         Log.i("TAG", "mScaledTouchSloup = " + mScaledTouchSlop);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        //上次绝对坐标
+
         int x = (int) event.getX();
         int y = (int) event.getY();
+        Log.i(TAG, "x = " + x + " \t y = " + y);
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                //记录起始位置
-                mLastX = x;
-                mLastY = y;
+
                 break;
             case MotionEvent.ACTION_MOVE:
-
                 int deltaX = x - mLastX;
                 int deltaY = y - mLastY;
-                //使用layout来实现滑动
-                layout(getLeft() + deltaX, getTop() + deltaY, getRight() + deltaX, getBottom() + deltaY);
+
                 break;
             case MotionEvent.ACTION_UP:
 
                 break;
-            default:
-                break;
         }
         //记录上次位置
-        mLastX = x;
-        mLastY = y;
+//        mLastX = x;
+//        mLastY = y;
         return true;
     }
 }
