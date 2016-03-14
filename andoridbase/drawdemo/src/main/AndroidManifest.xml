@@ -19,6 +19,7 @@
         <activity android:name=".DrawClockActivity" />
         <activity android:name=".TwoDActivity" />
         <activity android:name=".DrawLayerActivity" />
+        <activity android:name=".QuadLineActivity" />
     </application>
 
 </manifest>

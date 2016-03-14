@@ -16,10 +16,13 @@ public class MainActivity extends AppCompatActivity {
     private Context context = this;
 
     private final String[] items = {
-            "使用Draw绘制2D图","Canvas实例-绘制Clock","Canvas实例-绘制Layer"
+            "使用Draw绘制2D图","Canvas实例-绘制Clock","Canvas实例-绘制Layer",
+            "quadTo与lineTo()区别"
     };
     private final Class<?>[] classes = {
-            Draw2dActivity.class,DrawClockActivity.class,DrawLayerActivity.class};
+            Draw2dActivity.class,DrawClockActivity.class,DrawLayerActivity.class,
+            QuadLineActivity.class
+    };
     private ArrayAdapter<String> mAdapter;
 
     @Override
