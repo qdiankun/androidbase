@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注意：\n 1. View的onTouchEvent默认消耗事件(返回true)，除非它是不可点击的(clickable和longclick同时为false)，View的longClickable默认为false，clickable分情况Button为true，TextView为false  \n   \n2.View的enable不影响onTouchEvent的返回值，哪怕一个View是disable状态，只要它的clickable或longClickable有一个为true,那么它的onTouchEvent就会返回true"
+        android:textColor="@color/transparent_red"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_touch_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_selector"
+        android:onClick="onClick"
+        android:padding="5dip"
+        android:text="TouchEvent事件传递次序,处理滑动冲突，MyLayout处理水平方向滑动事件，子View处理竖直方向的滑动事件"
+        android:textAllCaps="false"
+        android:textSize="22sp" />
+
+
+</LinearLayout>

@@ -21,6 +21,7 @@
         <activity android:name=".AnimationTweenActivity" />
         <activity android:name=".AnimationPropertyActivity" />
         <activity android:name=".AnimateCircleActivity"/>
+        <activity android:name=".AnimationFrameActivity"/>
         <!--滑动View的实例 -->
         <activity android:name=".ScrollViewActivity"/>
         <activity android:name=".ScrollViewOneActivity"/>
@@ -28,6 +29,11 @@
         <activity android:name=".ScrollViewThreeActivity"/>
         <activity android:name=".ScrollViewFourActivity"/>
         <activity android:name=".ScrollViewFiveActivity"/>
+
+
+        <activity android:name=".ChangeAnimActivity"/>
+        <activity android:name=".NextActivity"/>
+        <activity android:name=".ModifyButtonWidthActivity"/>
     </application>
 
 </manifest>

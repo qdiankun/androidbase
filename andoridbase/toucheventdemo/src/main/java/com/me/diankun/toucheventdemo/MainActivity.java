@@ -1,4 +1,4 @@
-package com.me.diankun.showinfodemo;
+package com.me.diankun.toucheventdemo;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,16 +15,11 @@ public class MainActivity extends AppCompatActivity {
     private Context context = this;
 
     private final String[] items = {
-            "使用Dialog显示信息", "第三方库显示MaterialDialog", "使用PopupWindow",
-            "Window显示Button和Dialog","使用Window显示蒙板效果"
-
+            "TouchEvent事件的传递"
     };
-
     private final Class<?>[] classes = {
-            DialogActivity.class,LibraryDialogActivity.class,PopupActivity.class,
-            ShowWindowActivity.class,TeachWindowActivity.class
+            TouchTransActivity.class
     };
-
     private ArrayAdapter<String> mAdapter;
 
     @Override

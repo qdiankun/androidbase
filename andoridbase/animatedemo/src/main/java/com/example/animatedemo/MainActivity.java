@@ -15,12 +15,16 @@ public class MainActivity extends AppCompatActivity {
     private Context context = this;
 
     private final String[] items = {
-                        "滑动View的几种方法","滑动View几种方法详解","mScrollX与mScrollY理解","补间动画",
-                        "属性动画","郭神滚动颜色改变圆的例子"
-                        };
+            "滑动View的几种方法","滑动View几种方法详解","mScrollX与mScrollY理解","补间动画",
+            "属性动画","郭神滚动颜色改变圆的例子","帧动画",
+            "ListView中Item和Activity切换效果","修改Button的宽度动画实现"
+
+    };
     private final Class<?>[] classes = {
-                        DragViewActivity.class,ScrollViewActivity.class,ScrollXActivity.class,AnimationTweenActivity.class,
-                        AnimationPropertyActivity.class,AnimateCircleActivity.class};
+            DragViewActivity.class,ScrollViewActivity.class,ScrollXActivity.class,AnimationTweenActivity.class,
+            AnimationPropertyActivity.class,AnimateCircleActivity.class,AnimationFrameActivity.class,
+            ChangeAnimActivity.class,ModifyButtonWidthActivity.class
+    };
     private ArrayAdapter<String> mAdapter;
 
     @Override

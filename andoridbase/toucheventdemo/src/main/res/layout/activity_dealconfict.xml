@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.me.diankun.toucheventdemo.view.MyLayout
+        android:id="@+id/mylayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_blue_bright"
+        android:orientation="vertical">
+
+        <com.me.diankun.toucheventdemo.view.MyButton
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:background="@android:color/holo_purple"
+            android:text="This is MyButton"
+            android:textSize="25sp"></com.me.diankun.toucheventdemo.view.MyButton>
+
+        <com.me.diankun.toucheventdemo.view.MyTextView
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="5dip"
+            android:layout_weight="1"
+            android:background="@android:color/holo_blue_dark"
+            android:gravity="center"
+            android:text="This is MyText"
+            android:textSize="25sp"></com.me.diankun.toucheventdemo.view.MyTextView>
+
+        <com.me.diankun.toucheventdemo.view.MyView
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="5dip"
+            android:layout_weight="1"
+            android:background="@android:color/holo_green_light"
+            android:gravity="center"
+            android:text="This is View"
+            android:textSize="25sp"></com.me.diankun.toucheventdemo.view.MyView>
+
+
+    </com.me.diankun.toucheventdemo.view.MyLayout>
+
+</LinearLayout>
