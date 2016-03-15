@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="Movingview">
+        <attr name="movingbackground" format="reference"/>
+        <attr name="handlebackground" format="reference"/>
+        <attr name="extraspace" format="dimension"/>
+    </declare-styleable>
+</resources>

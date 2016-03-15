@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/btn_draw_quadTo_lineTo"
+        style="@style/button_style"
+        android:text="使用贝塞尔quadTo和lineTo绘制绘制区别" />
+
+
+
+    <Button
+        android:id="@+id/btn_draw_surfaceview"
+        style="@style/button_style"
+        android:text="使用SurfaceView绘制区别" />
+
+
+</LinearLayout>

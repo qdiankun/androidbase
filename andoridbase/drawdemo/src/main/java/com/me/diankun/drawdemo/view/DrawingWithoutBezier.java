@@ -11,9 +11,9 @@ import android.view.MotionEvent;
 import android.view.View;
 
 /**
- * Created by diankun on 2016/3/14.
+ * Created by diankun on 2016/3/15.
  */
-public class DrawingWithBezier extends View {
+public class DrawingWithoutBezier extends View {
 
     //记录上次位置
     private float mLastX;
@@ -22,12 +22,22 @@ public class DrawingWithBezier extends View {
     private final Paint mGesturePaint = new Paint();
     private final Path mPath = new Path();
 
-
-    public DrawingWithBezier(Context context) {
+    /**
+     * 在代码中使用
+     *
+     * @param context
+     */
+    public DrawingWithoutBezier(Context context) {
         this(context, null);
     }
 
-    public DrawingWithBezier(Context context, AttributeSet attrs) {
+    /**
+     * 用于布局文件中使用
+     *
+     * @param context
+     * @param attrs
+     */
+    public DrawingWithoutBezier(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         init();
@@ -39,7 +49,6 @@ public class DrawingWithBezier extends View {
         mGesturePaint.setStrokeWidth(5);
         mGesturePaint.setColor(Color.WHITE);
     }
-
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -60,16 +69,12 @@ public class DrawingWithBezier extends View {
                 float dy = Math.abs(y - mLastY);
                 //两点之间的距离大于等于3时，连接连接两点形成直线
                 if (dx >= 3 || dy >= 3) {
-                    //设置贝塞尔曲线的操作点为起点和终点的一半
-                    float cX = (x + mLastX) / 2;
-                    float cY = (y + mLastY) / 2;
-
-                    //二次贝塞尔，实现平滑曲线；previousX, previousY为操作点，cX, cY为终点
-                    mPath.quadTo(mLastX, mLastY, cX, cY);
+                    //两点连成直线
+                    mPath.lineTo(x, y);
                 }
                 break;
             case MotionEvent.ACTION_UP:
-                //mPath.reset();
+                mPath.reset();
                 break;
         }
 
@@ -85,10 +90,8 @@ public class DrawingWithBezier extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
+        Log.i("TAG", "onDraw");
         super.onDraw(canvas);
-        //通过画布绘制多点形成的图形
         canvas.drawPath(mPath, mGesturePaint);
     }
-
-
 }
