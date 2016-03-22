@@ -11,6 +11,10 @@ import android.os.Build;
 import android.provider.MediaStore;
 import android.util.Log;
 
+import java.io.FileDescriptor;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -79,6 +83,32 @@ public class BitmapUtils {
             // 选择宽和高中最小的比率作为inSampleSize的值，这样可以保证最终图片的宽和高
             // 一定都会大于等于目标的宽和高。
             inSampleSize = heightRatio < widthRatio ? heightRatio : widthRatio;
+        }
+        return inSampleSize;
+    }
+
+
+    /**
+     * 计算采样率，inSample的值应该总是2的指数
+     * @param options
+     * @param reqWidth
+     * @param reqHeight
+     * @return
+     */
+    public static int calculateInSampleSizeNew(BitmapFactory.Options options, int reqWidth, int reqHeight) {
+        // 源图片的高度和宽度
+        final int height = options.outHeight;
+        final int width = options.outWidth;
+        int inSampleSize = 1;
+        if (height > reqHeight || width > reqWidth) {
+            //Calculate the large inSampleSize value that is a power of 2 and keep both
+            //height and width larger than the requested height and width
+            int halfHeight = height / 2;
+            int halfWidth = width / 2;
+            while ((halfHeight / inSampleSize) >= reqHeight &&
+                    (halfWidth / inSampleSize) > reqWidth) {
+                inSampleSize *= 2;
+            }
         }
         return inSampleSize;
     }
@@ -162,6 +192,16 @@ public class BitmapUtils {
         // 关闭连接
         if (conn != null) conn.disconnect();
         return bitmap;
+    }
+
+    public static Bitmap decodeSampledBitmapFromFileInputStream(FileInputStream fis, int reqWidth, int reqHeight) {
+        try {
+            FileDescriptor fileDescriptor = fis.getFD();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
 }
