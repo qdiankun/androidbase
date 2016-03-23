@@ -29,6 +29,7 @@
         <activity android:name=".ScrollViewThreeActivity"/>
         <activity android:name=".ScrollViewFourActivity"/>
         <activity android:name=".ScrollViewFiveActivity"/>
+        <activity android:name=".DimActivity"/>
 
 
         <activity android:name=".ChangeAnimActivity"/>
