@@ -137,7 +137,7 @@ public class ScrollXActivity extends AppCompatActivity {
                     break;
                 case R.id.rightButton:
                     //让mTextView的内容往右移直接到-30的位置
-                    mTextView.scrollTo(-30, 0);
+                    mTextView.scrollTo(-5, 0);
                     break;
                 default:
                     break;
