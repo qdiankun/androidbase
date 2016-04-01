@@ -1,4 +1,4 @@
-include ':animatedemo', ':showinfodemo', ':drawdemo', ':broadcastdemo', ':toucheventdemo'
+include ':animatedemo', ':showinfodemo', ':drawdemo', ':broadcastdemo', ':toucheventdemo', ':lib'
 include ':commonview'
 include ':imagedemo'
 include ':recyclerviewdemo'
